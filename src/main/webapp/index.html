@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Start Page</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Equação de 2º Grau</title>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Equação de 2º Grau</h1>
+        <p>Preencha os valores dos coeficientes para calcular as raízes da equação: <i>a &middot; x<sup>2</sup> + b &middot; x + c = 0</i>.</p>
+        <form action="raizes" method="GET">
+            <ul>
+                <li><label for="a">a:</label><input type="text" name="a" id="a"></li>
+                <li><label for="b">b:</label><input type="text" name="b" id="b"></li>
+                <li><label for="c">c:</label><input type="text" name="c" id="c"></li>
+            </ul>
+            <input type="submit" value="Calcular as raízes">
+        </form>
     </body>
 </html>

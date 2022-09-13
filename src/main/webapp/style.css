@@ -1,0 +1,22 @@
+body {
+    font-family: sans-serif;
+}
+
+i {
+    background-color: yellow;
+}
+
+form li {
+    list-style-type: none;
+    margin-bottom: .5em;
+}
+
+label {
+    margin-right: .25em;
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 5px;
+}
