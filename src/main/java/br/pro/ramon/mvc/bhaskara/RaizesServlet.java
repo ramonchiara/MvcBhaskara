@@ -13,15 +13,19 @@ public class RaizesServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        double a = Double.parseDouble(req.getParameter("a"));
-        double b = Double.parseDouble(req.getParameter("b"));
-        double c = Double.parseDouble(req.getParameter("c"));
+        try {
+            double a = Double.parseDouble(req.getParameter("a"));
+            double b = Double.parseDouble(req.getParameter("b"));
+            double c = Double.parseDouble(req.getParameter("c"));
 
-        Equacao2Grau eq = new Equacao2Grau(a, b, c);
+            Equacao2Grau eq = new Equacao2Grau(a, b, c);
 
-        req.setAttribute("equacao", eq);
-        RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/resultado.jsp");
-        rd.forward(req, resp);
+            req.setAttribute("equacao", eq);
+            RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/resultado.jsp");
+            rd.forward(req, resp);
+        } catch (NumberFormatException ex) {
+            resp.sendRedirect("index.html");
+        }
     }
 
 }
